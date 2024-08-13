@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/backgroundColor"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weather Forecast"
+        android:textSize="24sp"
+        android:textColor="@color/titleColor"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/editTextCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewTitle"
+        android:layout_marginTop="61dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_background"
+        android:hint="Enter city name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/textColor" />
+
+    <Button
+        android:id="@+id/buttonFetchWeather"
+        android:layout_width="173dp"
+        android:layout_height="68dp"
+        android:layout_below="@id/editTextCity"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="117dp"
+        android:backgroundTint="#FFB0BAC5"
+        android:text="Get Weather"
+        android:textAlignment="center"
+        android:textColor="@color/textColor" />
+
+    <ImageView
+        android:id="@+id/imageViewWeatherIcon"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/buttonFetchWeather"
+        android:layout_alignBottom="@+id/textViewTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-284dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="-26dp"
+        android:layout_toEndOf="@+id/textViewTitle"
+        android:contentDescription="@string/weather_icon"
+        android:src="@drawable/ic_sunny" />
+
+    <TextView
+        android:id="@+id/textViewWeather"
+        android:layout_width="154dp"
+        android:layout_height="68dp"
+        android:layout_below="@+id/buttonFetchWeather"
+        android:layout_alignEnd="@+id/buttonFetchWeather"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="2dp"
+        android:textAlignment="center"
+        android:text="Weather Info"
+        android:textColor="@color/textColor"
+        android:textSize="18sp" />
+
+</RelativeLayout>
